@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Peter Portfolio</title>
 </head>
 <body>
  <header>
-     <a href="#" class="logo">Peter</a>
-    <nav class="active">
-        <a href="#" class="active">Home</a>
-        <a href="#">Skills</a>
-        <a href="#">Experience</a>
-        <a href="#">Education</a>
-        <a href="#">Contact</a>
+     <a href="#home" class="logo">Peter</a>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
     </nav>
  </header>
- <section class="home">
+ <section id="home" class="home">
     <div class="my-image">
-    <img src="gradpic.jpg" alt="">
+    <img src="images/gradpic.jpg" alt="">
     </div>
     <div class="home-content">
         <h1>Hi, It's me <span>Peter</span></h1>
@@ -31,15 +31,130 @@ environments and challenges, demonstrating both competence and
 potential in every task I take on. With solid experience in teamwork and
 time management, I thrive in collaborative settings and consistently
 deliver results under pressure. I’m eager to apply and grow my skills in a
-professional setting where I can continue learning</p>
+professional setting where I can continue learning.</p>
         <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/petestrygwyr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/tuñacao-john-peter-t-tuñacao-55a55736b" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/jpeterzxzx" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/dashboard" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
         <a href="#" class="btn">Hire me</a> 
     </div>
  </section>
+
+<section id="skills">
+    <div class="skill-image">
+        <img src="images/skillpic.jpg">
+    </div>
+    <div class="skill-page">
+        <h1><span>Skills</span></h1>
+        <ul class="skill-list"> 
+            <li>HTML & CSS</li>
+            <li>Basic JavaScript</li>
+            <li>C++ / C# </li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Git & GitHub</li>
+            <li>Networking</li>
+            <li>Hardware Troubleshooting</li>
+            <li>Computer System Servicing</li>
+            
+        </ul>
+    </div>
+
+</section>
+
+<section id="experience">
+  <div class="experience-image">
+    <img src="/images/experience.jpg" >
+  </div>
+
+  <div class="experience-content">
+    <h1 class="section-title"><span>Experience</span></h1>
+
+    <div class="experience-item">
+      <h2>Sensure – Smart License Plate Recognition</h2>
+      <p><strong>Duration:</strong> Jul 2024 – Jun 2025</p>
+      <p>
+        Developed a sensor-based access system with real-time plate recognition using React Native, Node.js, and Python.
+        It automates vehicle entry by scanning plate numbers and verifying them against a database, replacing traditional sticker passes.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h2>SUMOBOT</h2>
+      <p><strong>Duration:</strong> Nov 2023 – Mar 2024</p>
+      <p>
+        Built a self-controlled robot using Arduino and C++ that competes in sumo-style matches by detecting and pushing opponents out of a ring.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h2>Food Ordering App</h2>
+      <p><strong>Duration:</strong> Jun 2023 – Nov 2023</p>
+      <p>
+        Created a desktop food ordering app with C# (Windows Forms) where users can select dishes, adjust quantities,
+        and view order summaries. Included basic UI and logic handling.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <h2>Quiz Application</h2>
+      <p><strong>Duration:</strong> Mar 2023 – May 2023</p>
+      <p>
+        Developed a C# Windows Forms app featuring multiple-choice questions, automatic scoring,
+        and feedback based on correct or wrong answers. It was used in classroom settings for quick assessments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+    <div class="education-image">
+        <img src="/images/UC.jpg">
+    </div>
+
+    <div class="education-content">
+
+        <h1><span>Education</span></h1>
+    <div class="education-grades">
+        <h2>Mandaue City Comprehensive National High School</h2>
+        <h3 class="level">High School</h3>
+        <p>2014-2018</p>
+    </div>
+    <div class="education-grades">
+        <h2>University of Cebu Banilad</h2>
+        <h3 class="level">Senior High School</h3>
+        <p>2018-2020</p>
+    </div>
+    <div class="education-grades">
+        <h2>University of Cebu Lapu-Lapu and Mandaue</h2>
+        <h3 class="level">College</h3>
+        <p>2021-2025</p>
+    </div>
+
+    </div>
+
+</section>
+
+
+
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  const logo = document.querySelector('.logo');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  logo.addEventListener('click', function () {
+    navLinks.forEach(l => l.classList.remove('active'));
+    document.querySelector('nav a[href="#home"]').classList.add('active');
+  });
+</script>
+
 </body>
 </html>
