@@ -457,3 +457,148 @@ span{
     width: 80vw;
   }
 }
+
+/* ========== MOBILE RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+
+  /* General layout adjustments */
+  section {
+    padding: 3rem 5%;
+    text-align: center;
+  }
+
+  /* Hide navbar for mobile (you mentioned you prefer this) */
+  nav {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  /* Home section */
+  .home {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 8rem;
+  }
+
+  .my-image img {
+    width: 60vw;
+  }
+
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    margin-left: 0;
+  }
+
+  /* Skills section */
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skill-image img {
+    width: 80vw;
+    height: auto;
+    margin: 0;
+  }
+
+  .skill-page {
+    margin: 3rem 0 0 0;
+  }
+
+  .skill-page h1 {
+    font-size: 4rem;
+  }
+
+  .skill-list li {
+    font-size: 1.8rem;
+  }
+
+  /* Experience section */
+  #experience {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 5%;
+  }
+
+  .experience-image img {
+    width: 80vw;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .experience-item {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  /* Project section */
+  .project-title {
+    font-size: 4rem;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .project-image {
+    width: 80vw;
+    height: auto;
+  }
+
+  .project-description {
+    max-width: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Education section */
+  #education {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .education-image img {
+    width: 80vw;
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  .education-content h1 {
+    font-size: 4rem;
+  }
+
+  .education-grades {
+    font-size: 1.4rem;
+  }
+
+  /* Contact section (if you add content later) */
+  #contact {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+}
