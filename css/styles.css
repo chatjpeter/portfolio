@@ -324,7 +324,7 @@ span{
   justify-content: center;
   align-items: flex-start;
   gap: 4rem;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .education-image img{
@@ -348,4 +348,112 @@ span{
     font-weight: 400;
     margin-top: 5rem;
     text-align: center;
+}
+
+
+#project {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 9%;
+  background-color: black;
+  color: white;
+}
+
+.project-title {
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 6rem;
+}
+
+.project-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap; /* makes it responsive on smaller screens */
+}
+.project-image {
+  height: 60vh;
+  width: 40vw;
+  overflow: hidden; /* hides any overflowing image parts */
+  border-radius: 10px;
+}
+.project-image img {
+  width: 100%;
+
+  height:100%;
+
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.03);
+}
+
+.project-description {
+  
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color:white;
+}
+
+.project-description h2 {
+  font-size: 3rem;
+  color: #FF4500;
+  margin-bottom: 1rem;
+  
+}
+
+
+.project-item a {
+  display: block;
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.3s, color 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  border-color: #00b894;
+  color: #90ffe7;
+  box-shadow: 0 0 15px #00b894;
+}
+
+
+.project-item {
+  margin-top: 2rem;
+}
+
+.project-item h3 {
+  font-size: 2rem;
+  color: #FF4500;
+}
+
+.project-item p {
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 900px) {
+  .project-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-description {
+    text-align: center;
+  }
+
+  .project-image img {
+    width: 80vw;
+  }
 }
