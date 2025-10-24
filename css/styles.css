@@ -602,3 +602,7 @@ span{
   }
 
 }
+
+header .logo {
+    display: none;
+}
